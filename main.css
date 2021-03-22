@@ -1,7 +1,7 @@
 body {font-family: Arial, Helvetica, sans-serif;margin:0;
 }
 * {box-sizing: border-box;}
-
+/* hero image------------------------------------------------------------------------------------------------ */
 .bg-img {
   background-image: url("a.jpg");
   min-height: 380px;
@@ -11,15 +11,12 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   position: relative;
   
 }
-
-/* Position the navbar container inside the image */
 .container {
   position: absolute;
   margin: 0px;
   width: auto;
 }
-
-/* The navbar */
+/* The navbar ----------------------------------------------------------------------------------------------------*/
 #topnav {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.7);
@@ -28,9 +25,6 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   transition: 1s;
   z-index: 2;
 }
-
-
-/* Navbar links */
 #topnav a {
   float: left;
   color: #f2f2f2;
@@ -40,9 +34,23 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   font-size: 30px;
   font-family: 'Redressed', cursive;
 }
+
+#topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+@media screen and (max-width : 900px){
+
+
+  #topnav a{
+    font-size: 20px;
+  }
+}
+/*choose category button----------------------------------------------------------------------------------------*/
 #textcategory:hover{
   color:rgb(0, 170, 28);
 }
+/*table number selection-----------------------------------------------------------------------------------------*/
 .tableno{
   position: absolute;
   margin: 0px;
@@ -50,33 +58,22 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   bottom: 10px;
   left: 10px;
   float: left;
-  background-color: rgb(255, 136, 0);
+  background-color: rgba(255, 81, 0, 0.842);
   padding: 10px;
-  
   font-family: 'Redressed', cursive;
   font-size: 20px;
   color: rgb(255, 255, 255);
   z-index: 0;
 }
-.tableno input{
+.tableno select{
   background-color: rgb(255, 255, 255);
   border: none;
-  width: 80px;
   text-align: center;
   color: rgb(0, 0, 0);
-  width: 40px;
-  margin-left:10px;
-
- 
+  width: auto;;
+  margin-left:10px; 
 }
-
-#topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-
-/*category overlay*/
+/*category overlay-----------------------------------------------------------------------------------------------*/
 .overlay {
     height: 0%;
     width: 100%;
@@ -87,8 +84,8 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
     background-color: rgba(0,0,0, 0.9);
     transition: 0.5s;
     overflow-y: auto;
+    overflow-x: hidden;
   }
-  
   .overlay-content {
     position: relative;
     top: 50px;
@@ -97,11 +94,10 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
     display:block;
     text-align:center;
   }
-  
   .overlay a {
     padding: 8px 20px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 30px;
     color: #e7e3e3;
     display: inline-block;
     transition: 0.3s;
@@ -112,155 +108,137 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
     color: #f1f1f1;
   }
   
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+  .overlay .closebtn1 {
+    font-size: 50px;
+    float: right;
+    color: white;
+    padding-right: 20px;
+   
   }
   
   @media screen and (max-height: 450px) {
     .overlay {overflow-y: auto;}
     .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+  }
+  @media screen and (max-width: 550px) {
+    .overlay-content{
+      text-align: left;
+      margin-top: 10px;
+    }
+    .overlay a {
+      font-size: 30px;
+      width: 100%;
     }
   }
-  /*category tab*/
+  /*category tab------------------------------------------------------------------------------------------------*/
   .tabcontent {
     display: none;
     padding: 0px 0px;
     width: auto;
     margin: 0;
-    height: fit-content;
-    
-    
+    height: fit-content; 
   }
 
-/*dish card*/
-.dishcard {
+/*dish card------------------------------------------------------------------------------------------------------*/
+.maincard {
+  display: block;
   position: relative;
-  width: 45%;
+  width: auto;
+  max-height: 150px;
+  min-height: 120px;
+  background-color: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  height: 110px;
-  margin-left: 3.33%;
-  float: left;
-  margin-bottom: 30px;
-  border-radius: 5px;
- 
-  z-index: -1;
+  transition: 1s;
+  background-image: url(x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: bottom;
+  line-height: 1;
 }
-.dishcard a{
+.maincard:hover {
+  background-color: rgb(255, 208, 0);
+}
+.imgcontainer {
   position: absolute;
-  width: 100%;
+  float: left;
   height: 100%;
-  margin: 0;
-  background-color: rgb(255, 255, 255);
-  transition: 1.3s;
-  font-family: 'Redressed', cursive;
-  text-decoration: none;
+  width: 16%;
+  top: 15%;
+  bottom: 15%;
+  padding-left: 1%;
 }
-.dishcard a:hover{
-  background-color: lightgreen;
-}
-.dishcard img{
-  height: 80px;
-  width: 80px;
-  margin-top: 15px;
-  margin-left: 15px;
+.imgcontainer img {
+  height: 70%;
+  width: auto;
   border-radius: 50%;
 }
-#vegimg{
-  position:absolute;
-  height: 20px;
-  width: 20px;
-  margin: 0 0 0 5px;
-  border-radius:0;
-  float: left;
-}
-.dishcard p1{
+.p1 {
   position: absolute;
-  top: 12px;
-  left:110px;
+  left: 20%;
+  top: 15%;
+  padding-left: 5%;
   font-size: 25px;
-  color: rgb(61, 58, 58);
-  line-height: 100%;
-
+  max-width: 59%;
+  height: auto;
+  color: rgb(32, 32, 32);
+  font-family: 'Playfair Display', serif;
 }
-.dishcard p2{
+.p2 {
   position: absolute;
-  top: 10px;
-  right:20px;
+  left: 79%;
+  top: 10%;
+  padding-right: 1%;
   font-size: 30px;
-  color: rgba(0, 0, 0, 0.753);
+  width: 21%;
+  height: auto;
+  color: rgb(49, 47, 47);
+  font-family: 'Playfair Display', serif;
 }
-.dishcard p3 {
+.p3 {
   position: absolute;
-  bottom: 10px;
-  right:20px;
-  font-size: 20px;
-  color: rgb(73, 70, 70);
-  transition: 2s;
+  right: 2%;
+  bottom: 5%;
+  font-size: 22px;
+  width: auto;
+  height: auto;
+  color: rgb(46, 46, 46);
+  padding: 5px;
+  width: 80%;
+  float: right;
+  text-align: right;
 }
-p3 :hover{
-  color:rgb(0, 0, 0);
+.p3 a {
+  text-decoration: none;
+  color: rgb(44, 44, 44);
 }
-@media screen and (max-width : 900px){
-  .dishcard{
-    width: 95%;
-    margin-left: 2.5%;
-    height: 100px;
-  }
-  .dishcard img{
-    height: 60px;
-    width: 60px;
-    margin-top: 20px;
-    margin-left: 10px;
-    border-radius: 50%;
-    
-  }
-
-  #topnav a{
-    font-size: 15px;
-  }
-  .overlay a {
-    font-size: 20px;
-    width: 100%;
-  }
-  .dishcard p1{
-    top: 28px;
-    left:74px;
-  }
-  .dishcard p1{
-    top: 28px;
-    left:80px;
-    font-size: 20px;
-  }
-  .dishcard p2{
-    top: 3px;
-    right:10px;
-    font-size: 20px;
-    
-  }
-  .dishcard p3{
-    bottom: 10px;
-    right:15px;
-    font-size: 13px;
-  }
-  #vegimg{
-    position:absolute;
-    height: 17px;
-    width: 17px;
-    margin: 0 0 0 5px;
-    border-radius:0;
-    float: left;
-    
+@media screen and(max-width:700px) {
+  .maincard {
+      width: 100%;
   }
 }
-
-
+.columncard {
+  float: left;
+  width: 45%;
+  padding: 0;
+  margin: 7px 2.5%;
+}
+.rowcard {
+  margin: 0px;
+}
+.rowcard:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .columncard {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      margin: 5px 0.5%;
+  }
+}
+/*cart designing---------------------------------------------------------------------------------------------*/
 .cart {
   height: 100%;
   width: 100%;
@@ -272,7 +250,6 @@ p3 :hover{
   background-color: rgb(255, 255, 255);
   overflow-y: auto;
 }
-
 .cart-content {
   position: relative;
   top: 25%;
@@ -280,7 +257,6 @@ p3 :hover{
   text-align: center;
   margin-top: 15px;
 }
-
 .cart a {
   padding: 8px;
   text-decoration: none;
@@ -289,12 +265,9 @@ p3 :hover{
   display: block;
   transition: 0.3s;
 }
-
 .cart a:hover, .cart a:focus {
   color: #f1f1f1;
 }
-
-
 @media screen and (max-height: 450px) {
   .cart a {font-size: 20px}
   .cart .closebtn {
@@ -303,23 +276,17 @@ p3 :hover{
   right: 35px;
   }
 }
-
-
 .closebtn{
   font-size: 50px;
   float: right;
 }
-
-/*tab content cart*/
-
-
+/*tab content cart-----------------------------------------------------------------------------------------------*/
 .cart table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
   text-align: center;
 }
-
 .cart table td, table th {
   border: 1px solid #ddd;
   padding: 8px;
@@ -329,9 +296,7 @@ p3 :hover{
   width: 30%;
 }
 .cart table tr:nth-child(even){background-color: #f2f2f2;}
-
 .cart table tr:hover {background-color: #ddd;}
-
 .cart table th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -350,31 +315,19 @@ p3 :hover{
   margin: 5px;
   color: rgb(63, 61, 61);
 }
-
-
-
-
-
-/*footer*/
-/* Float four columns side by side */
+/*footer--------------------------------------------------------------------------------------------------------*/
 .column {
   float: left;
   width: 33%;
   padding: 0 10px;
   text-align: center;
 }
-
-/* Remove extra left and right margins, due to padding */
 .row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
-/* Responsive columns */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -397,9 +350,8 @@ p3 :hover{
   display: block;
   text-align: center;
   margin-top: 50px;
-
 }
-
+/*info tab-------------------------------------------------------------------------------------------------------*/
 .info {
   height: 0%;
   width: 100%;
@@ -450,3 +402,4 @@ p3 :hover{
     margin-bottom: 20px;
   }
 }
+
