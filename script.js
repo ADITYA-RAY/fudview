@@ -3,6 +3,8 @@
 //openNav
 //closeNav
 //openCategory
+//openInfo
+//closeInfo
 //reserved function names ends---------------------------------------------------------------------------------------------------
 
 
@@ -12,7 +14,7 @@
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 280 || document.documentElement.scrollTop > 280) {
         document.getElementById("topnav").style.backgroundColor = " rgb(43, 41, 41)";
     } else {
         document.getElementById("topnav").style.backgroundColor = " rgba(0, 0, 0, 0.7)";
@@ -28,14 +30,13 @@ function closeNav() {
     document.getElementById("myNav").style.height = "0%";
 }
 
-//category function tab----------------------------------------------------------------------------------------
+//category function tab-------------------------------------------------------------------------------------------------
 function openCategory(category, number) {
 
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
-
     }
 
     document.getElementById("myNav").style.height = "0%";
@@ -103,43 +104,43 @@ function openCart(dishname,price) {
     if (tableno == 1) {
         document.getElementById("row1").style.display="block";
         document.getElementById("table1").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" +"</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,1)'>" +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     else if (tableno == 2) {
         document.getElementById("table2").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,2)'>" +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     else if (tableno == 3) {
         document.getElementById("table3").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,3)'>" +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     else if (tableno == 4) {
         document.getElementById("table4").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,4)'>" +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     else if (tableno == 5) {
         document.getElementById("table5").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,5)'>" +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     else if (tableno == 6) {
         document.getElementById("table6").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,6)'>" +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     else if (tableno == 7) {
         document.getElementById("table7").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,7)'>" +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     else if (tableno == 8) {
         document.getElementById("table8").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,8)'>" +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     else if (tableno == 9) {
         document.getElementById("table9").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,9)'>" +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     else if (tableno == 10) {
         document.getElementById("table10").innerHTML += "<tr>" + "<td>" + dishname + "</td> "+  "<td>" +"&#8377 "+ price + "</td>" + "</tr > " + " < tr > " + " < td > " + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + " < td > " + " < button onclick = 'deleteOrder(this,10)' > " +
-            "Remove" + "</button>" + "</td>" + "</tr>";
+            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
     }
     document.getElementById("tabcontentcart").style.display = "block";
     document.getElementById("tableselect").style.height = "0%";
@@ -201,9 +202,7 @@ function deleteOrder(r,tableno) {
 }
 
 function openInfo(infoid) {
-    var x=window.scrollX;
-    var y=window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
+ 
     document.getElementById("infotab").style.height = "100%";
     var i, tabcontent;
     tabcontent = document.getElementsByClassName("infotabcontent");
