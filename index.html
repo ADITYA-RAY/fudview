@@ -10,7 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Home | fudview</title>
 </head>
 
@@ -24,7 +30,20 @@
                         class="fa fa-shopping-cart"></i></a>
             </div>
         </div>
-        <div class="tableno">table no<input type="number" id="abc" value="1" min="1"></div>
+        <div class="tableno">Select table
+            <select id="abc">
+                <option value="1">table 1</option>
+                <option value="2">table 2</option>
+                <option value="3">table 3</option>
+                <option value="4">table 4</option>
+                <option value="5">table 5</option>
+                <option value="6">table 6</option>
+                <option value="7">table 7</option>
+                <option value="8">table 8</option>
+                <option value="9">table 9</option>
+                <option value="10">table 10</option>
+            </select>
+        </div>
     </div>
     <p style="font-family: 'Redressed', cursive;font-size: 25px;
      margin: 20px;padding: 10px 30px;border: 1px solid rgb(82, 80, 80);text-align: center;"><span
@@ -35,123 +54,184 @@
             <span id="name">Veg Starter</span>
         </span>
     </p>
-
     <!-- categories-->
     <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <span class="closebtn1" onclick="closeNav()">&times;</span>
         <div class="overlay-content">
-            <a href="javascript:void(0)" onclick="openCategory(category, 'defaultOpen')" class="defaultOpen">Veg
+            <a href="javascript:void(0)" onclick="openCategory(category, 'defaultOpen')" class="defaultOpen"><i
+                    class="fa fa-check-square-o" aria-hidden="true"></i>Veg
                 Starter</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '2')">Non-veg starter</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '3')">sandwich</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '4')">salad</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '5')">soup</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '6')">chineese starter</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '7')">Tandoori Veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '8')">Pizza's</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '9')">main course non-veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '10')">Tandoori Non-veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '11')">Chineese rice and noodles</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '12')">main course veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '13')">Beverage</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '14')">chineese main course veg & non-veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '15')">Roti/Indian Breads</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '16')">Indian Rice's & Biryani</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '17')">Desert's</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '2')"> <i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>Non-veg starter</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '3')"> <i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>sandwich</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '4')"> <i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>salad</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '5')"> <i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>soup</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '6')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>chineese starter</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '7')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>Tandoori Veg</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '8')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>Pizza's</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '9')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>main course non-veg</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '10')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>Tandoori Non-veg</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '11')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>Chineese rice and noodles</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '12')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>main course veg</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '13')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>Beverage</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '14')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>chineese main course veg & non-veg</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '15')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>Roti/Indian Breads</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '16')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>Indian Rice's & Biryani</a>
+            <a href="javascript:void(0)" onclick="openCategory(category, '17')"><i class="fa fa-check-square-o"
+                    aria-hidden="true"></i>Desert's</a>
         </div>
     </div>
     <div id="defaultOpen">
-        <div class="dishcard w3-animate-left">
-            <a href="javascript:void(0)">
-                <img src="def.jpg">
-                <p1> Schezwan Cheese Corn Dosa<img src="d.png" id="vegimg"></p1>
-
-                <p2> &#8377 180</p2>
-                <p3><span onclick="openCart('Schezwan Cheese Corn Dosa',200)">Add to cart <i
-                            class="fa fa-shopping-cart"></i> </span> | <span onclick="openInfo('i1')">More
-                        Info</span> </p3>
-            </a>
-        </div>
-        <div class="dishcard w3-animate-right">
-            <a href="javascript:void(0)">
-                <img src="def.jpg">
-                <p1> Tandoori Roti<img src="d.png" id="vegimg"></p1>
-                <p2> &#8377 100</p2>
-                <p3><span onclick="openCart('tandoori roti', 100)">Add to cart <i
-                            class="fa fa-shopping-cart"></i></span> |
-                    <span>More
-                        Info</span>
-                </p3>
-            </a>
-        </div>
-        <div class="dishcard w3-animate-left">
-            <a href="javascript:void(0)">
-                <img src="def.jpg">
-                <p1> Pakoda<img src="d.png" id="vegimg"></p1>
-                <p2> &#8377 50</p2>
-                <p3><span onclick="openCart('pakoda', 250)">Add to cart <i class="fa fa-shopping-cart"></i> </span> |
-                    <span>More
-                        Info</span>
-                </p3>
-            </a>
-        </div>
-        <div class="dishcard w3-animate-right">
-            <a href="javascript:void(0)">
-                <img src="def.jpg">
-                <p1> Ice Cream<img src="d.png" id="vegimg"></p1>
-                <p2> &#8377 250</p2>
-                <p3><span onclick="openCart('pav bhaji',100)">Add to cart <i class="fa fa-shopping-cart"></i> </span> |
-                    <span>More
-                        Info</span>
-                </p3>
-            </a>
-        </div>
-        <div class="dishcard w3-animate-left">
-            <a href="javascript:void(0)">
-                <img src="def.jpg">
-                <p1> Pav Bhaji<img src="d.png" id="vegimg"></p1>
-
-                <p2> &#8377 300</p2>
-                <p3><span onclick="openCart('Schezwan Cheese Corn Dosa',180)">Add to cart <i
-                            class="fa fa-shopping-cart"></i> </span> | <span>More
-                        Info</span> </p3>
-            </a>
-        </div>
-        <div class="dishcard w3-animate-right">
-            <a href="javascript:void(0)">
-                <img src="def.jpg">
-                <p1> Sweet Corn<img src="d.png" id="vegimg"></p1>
-                <p2> &#8377 200</p2>
-                <p3><span onclick="openCart('tandoori roti', 100)">Add to cart <i
-                            class="fa fa-shopping-cart"></i></span> |
-                    <span>More
-                        Info</span>
-                </p3>
-            </a>
-        </div>
-        <div class="dishcard w3-animate-left">
-            <a href="javascript:void(0)">
-                <img src="def.jpg">
-                <p1> Pakoda<img src="d.png" id="vegimg"></p1>
-                <p2> &#8377 100</p2>
-                <p3><span onclick="openCart('pakoda', 250)">Add to cart <i class="fa fa-shopping-cart"></i> </span> |
-                    <span>More
-                        Info</span>
-                </p3>
-            </a>
-        </div>
-        <div class="dishcard w3-animate-right">
-            <a href="javascript:void(0)">
-                <img src="def.jpg">
-                <p1> Vanilla Cake<img src="d.png" id="vegimg"></p1>
-                <p2> &#8377 80</p2>
-                <p3><span onclick="openCart('pav bhaji',100)">Add to cart <i class="fa fa-shopping-cart"></i> </span> |
-                    <span>More
-                        Info</span>
-                </p3>
-            </a>
+        <div class="rowcard">
+            <div class="columncard">
+                <div class="maincard">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
+            <div class="columncard">
+                <div class="maincard">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
+            <div class="columncard">
+                <div class="maincard" data-aos="fade-up">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
+            <div class="columncard">
+                <div class="maincard" data-aos="fade-up">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
+            <div class="columncard">
+                <div class="maincard" data-aos="fade-up">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
+            <div class="columncard">
+                <div class="maincard" data-aos="fade-up">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
+            <div class="columncard">
+                <div class="maincard" data-aos="fade-up">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
+            <div class="columncard">
+                <div class="maincard" data-aos="fade-up">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
+            <div class="columncard">
+                <div class="maincard" data-aos="fade-up">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
+            <div class="columncard">
+                <div class="maincard" data-aos="fade-up">
+                    <div class="cardcontain"></div>
+                    <div class="imgcontainer"> <img src="def.jpg"></div>
+                    <div class="p1">Schezwan Cheese Corn Dosa</div>
+                    <div class="p2"><span>&#8377</span>180 </div>
+                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        AOS.init({ duration: 1200, });
+    </script>
     <div id="2" class="tabcontent">
         2
     </div>
@@ -272,7 +352,7 @@
             <div id="i1" class="infotabcontent">
                 <div class="row">
                     <div class="infocolumn">
-                      <center>  <img src="h.jpg" width="80%" style="max-height: 500px;align-items: center;"></center>
+                        <center> <img src="h.jpg" width="80%" style="max-height: 500px;align-items: center;"></center>
                     </div>
                     <div class="infocolumn">
                         <p style="color: rgb(46, 46, 46);float: left; font-size: 30px;margin-bottom: 0px;">PASTA WITH
@@ -283,20 +363,25 @@
                             consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
                             est, qui dolorem ipsum quia dolor sit amet.</p>
                         <br>
-                        <p style="color:orange;float:left;font-size: 20px;position:static;margin-bottom: 20px;width: 100%;">Ingridents</p>
+                        <p
+                            style="color:orange;float:left;font-size: 20px;position:static;margin-bottom: 20px;width: 100%;">
+                            Ingridents</p>
 
-                        <p style="color:rgb(105, 105, 105);float:left;font-size: 15px;position:static;width: 100%;line-height:40px;">
+                        <p
+                            style="color:rgb(105, 105, 105);float:left;font-size: 15px;position:static;width: 100%;line-height:40px;">
                             <i class="fa fa-check-square-o" aria-hidden="true"></i>1/2 cup chopped red onions
-                        
-                        <br>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i>12 ounce lemon drops chupas chups bear
+
                             <br>
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i>3 pound seasme snaps powder gingerbread
-                                <br>
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>12 ounce lemon drops chupas chups
+                            bear
+                            <br>
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>3 pound seasme snaps powder
+                            gingerbread
+                            <br>
                             <i class="fa fa-check-square-o" aria-hidden="true"></i>1/4 cup jujubes jelly chupa
-                           
+
                         </p>
-                        
+
                     </div>
                 </div>
             </div>
@@ -322,16 +407,15 @@
         <div class="row">
             <div class="column">
                 <center> <img src="fudviewlogo.png" width="100px" height="100px" style="border-radius: 50%;">
-                    <p> Digital Menu by FudView</p>
+                    <p>Digital Menu by FudView</p>
                 </center>
             </div>
             <div class="column">
                 <p>Copyright <i class="fa fa-copyright"> </i> 2021. All Rights Reserved.</p>
-                <p>Made with <i class="fa fa-heart"> </i> in India by NeuroneLabs</p>
+                <p>Made with <i class="fa fa-heart"> </i> in <img src="y.png"> by NeuroneLabs</p>
                 <p>#VocalForLocal</p>
             </div>
             <div class="column">
-                <br><br>
                 <p>FudView a Product of NeuroneLabs</p>
             </div>
         </div>
