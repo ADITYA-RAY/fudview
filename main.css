@@ -32,7 +32,7 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 30px;
-  font-family: 'Redressed', cursive;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 #topnav a:hover {
@@ -43,7 +43,7 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
 
 
   #topnav a{
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 /*choose category button----------------------------------------------------------------------------------------*/
@@ -145,7 +145,6 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   flex-direction: column;
   position: relative;
   width: auto;
-  min-height: 140px;
   background-color: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 1s;
@@ -172,7 +171,7 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
 .p1 {
   
  margin-top: 10px;
-  width: 60%;
+  width: 58%;
   font-size: 25px;
   height: auto;
   color: rgb(32, 32, 32);
@@ -201,10 +200,24 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   text-decoration: none;
   color: rgb(44, 44, 44);
 }
-@media screen and(max-width:700px) {
-  .maincard {
-      width: 100%;
-  }
+.column3 {
+  float: left;
+  padding: 10px;
+  
+}
+
+.left3, .right3 {
+  width: 20%;
+}
+
+.middle3 {
+  width: 60%;
+}
+/* Clear floats after the columns */
+.row3:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .columncard {
   float: left;
@@ -220,14 +233,27 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   display: table;
   clear: both;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .columncard {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-      margin: 5px 0.5%;
+      width: 98%;
+      margin: 0 0 10px 0;
+      
+  }
+  .rowcard{
+    padding-left:7px ;
+    padding-right:auto ;
+
+  }
+  .p3 {
+
+ 
+    font-size: 27px;
+    
   }
 }
+
+
+
 /*cart designing---------------------------------------------------------------------------------------------*/
 .cart {
   height: 100%;
@@ -274,8 +300,13 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
 .cart table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 93%;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ background-color: #f0f0f0;
 }
 .cart table td, table th {
   border: 1px solid #ddd;
@@ -288,11 +319,12 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
 .cart table tr:nth-child(even){background-color: #f2f2f2;}
 .cart table tr:hover {background-color: #ddd;}
 .cart table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #2d7bff;
   color: white;
+  
 }
 .cart input{
   width: 50px;
@@ -392,23 +424,52 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
     margin-bottom: 20px;
   }
 }
-.column3 {
-  float: left;
+#quantity{
+background-color: #ddd;
+padding: 2px;
+border: 1px solid black;
+margin: 0;
+}
+ .boxcontainer{
+align-items: center;
+width: 93%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+}
+.boxes{
   padding: 10px;
-  
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  float: left;
+  background-color: #4CAF50;
+  text-align: center;
+  color: white;
 }
-
-.left3, .right3 {
-  width: 20%;
+#increase{
+  height: 30px;
+  background-color: rgb(185, 185, 185);
+  width:30px ;
+  float: left;
+  margin-right: 0;
+  border-radius: 4px 0 0 4px;
 }
-
-.middle3 {
-  width: 60%;
+#decrease{
+  height: 30px;
+  background-color: rgb(185, 185, 185);
+  width:30px ;
+  float: left;
+  margin-left: 0;
+  border-radius: 0px 4px 4px 0px;
 }
-
-/* Clear floats after the columns */
-.row3:after {
-  content: "";
-  display: table;
-  clear: both;
+.table1 input{
+  height: 30px;
+  width: 30px;
+  margin-right: 0px;
+  margin-left: 0px;
+  vertical-align: middle;
+}
+#t1o{
+  color: white;
 }
