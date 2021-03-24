@@ -92,59 +92,81 @@ function openCategory(category, number) {
 
 //cart tab---------------------------------------------------------------------------------------------
 function closeCart() {
-    window.onscroll=function(){};
+    window.onscroll = function () { };
     document.getElementById("tabcontentcart").style.display = "none";
 }
-function openCart(dishname,price) {
-    var x=window.scrollX;
-    var y=window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
+function openCart(dishname, price) {
+    var x = window.scrollX;
+    var y = window.scrollY;
+    window.onscroll = function () { window.scrollTo(x, y); };
     var tableno = document.getElementById("abc").value;
 
     if (tableno == 1) {
-        document.getElementById("row1").style.display="block";
-        document.getElementById("table1").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" +"</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,1)'>" +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        var total1 = document.getElementById("subtotal1").innerHTML;
+        var t1 = parseInt(total1);
+        t1 += parseInt(price);
+        document.getElementById("subtotal1").innerHTML = t1;
+        document.getElementById("box1").style.backgroundColor = "red";
+        document.getElementById("table1").style.display = "table";
+        document.getElementById("table1").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
     }
     else if (tableno == 2) {
-        document.getElementById("table2").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,2)'>" +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        document.getElementById("box2").style.backgroundColor = "red";
+        document.getElementById("table2").style.display = "table";
+        document.getElementById("table2").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
+
     }
     else if (tableno == 3) {
-        document.getElementById("table3").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,3)'>" +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        document.getElementById("box3").style.backgroundColor = "red";
+        document.getElementById("table3").style.display = "table";
+        document.getElementById("table3").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
+
     }
     else if (tableno == 4) {
-        document.getElementById("table4").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,4)'>" +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        document.getElementById("box4").style.backgroundColor = "red";
+        document.getElementById("table4").style.display = "table";
+        document.getElementById("table4").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
+
     }
     else if (tableno == 5) {
-        document.getElementById("table5").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,5)'>" +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        document.getElementById("box5").style.backgroundColor = "red";
+        document.getElementById("table5").style.display = "table";
+        document.getElementById("table5").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
+
     }
     else if (tableno == 6) {
-        document.getElementById("table6").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,6)'>" +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        document.getElementById("box6").style.backgroundColor = "red";
+        document.getElementById("table6").style.display = "table";
+        document.getElementById("table6").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
+
     }
     else if (tableno == 7) {
-        document.getElementById("table7").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,7)'>" +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        document.getElementById("box7").style.backgroundColor = "red";
+        document.getElementById("table7").style.display = "table";
+        document.getElementById("table7").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
+
     }
     else if (tableno == 8) {
-        document.getElementById("table8").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,8)'>" +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        document.getElementById("box8").style.backgroundColor = "red";
+        document.getElementById("table8").style.display = "table";
+        document.getElementById("table8").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
+
     }
     else if (tableno == 9) {
-        document.getElementById("table9").innerHTML += "<tr>" + "<td>" + dishname + "</td>"+  "<td>" +"&#8377 "+ price + "</td>" + "</tr>" + "<tr>" + "<td>" + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + "<td>" + "<button onclick='deleteOrder(this,9)'>" +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        document.getElementById("box9").style.backgroundColor = "red";
+        document.getElementById("table9").style.display = "table";
+        document.getElementById("table9").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
+
     }
     else if (tableno == 10) {
-        document.getElementById("table10").innerHTML += "<tr>" + "<td>" + dishname + "</td> "+  "<td>" +"&#8377 "+ price + "</td>" + "</tr > " + " < tr > " + " < td > " + "quantity: <input type='number' id='quantity' value='1' step='0.5'>" + "</td>" + " < td > " + " < button onclick = 'deleteOrder(this,10)' > " +
-            "<i class='fa fa-trash'></i>" + "</button>" + "</td>" + "</tr>";
+        document.getElementById("box10").style.backgroundColor = "red";
+        document.getElementById("table10").style.display = "table";
+        document.getElementById("table10").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='increase' onclick='increaseq(this,1)'>+</button><button id='decrease' onclick='decreaseq()'>-</button>" + "</td>" + "<td>" + "&#8377 " + price + "</td>" + "</tr>";
     }
+
     document.getElementById("tabcontentcart").style.display = "block";
     document.getElementById("tableselect").style.height = "0%";
-   
+
 
 
 }
@@ -152,57 +174,103 @@ function openCart(dishname,price) {
 function openCartMenu() {
     document.getElementById("tabcontentcart").style.display = "block";
     document.getElementById("tableselect").style.height = "0%";
-
-
 }
 
-function deleteOrder(r,tableno) {
-    
+function increaseq(r, tableno) {
     var i = r.parentNode.parentNode.rowIndex;
-    if(tableno==1){
-    document.getElementById("table1").deleteRow(i);
-    document.getElementById("table1").deleteRow(i-1);
+
+    if (tableno == 1) {
+        var x = document.getElementById('table1').rows[i].cells[1].innerHTML;
+        x = "<button id='increase' onclick='increaseq(this,1)'>+</button>"
+        x += y
+        var y = parseInt(x);
+        document.querySelector("#table1 #quantity").value = y + 1;
+
     }
-    else if(tableno==2){
+    else if (tableno == 2) {
         document.getElementById("table2").deleteRow(i);
-        document.getElementById("table2").deleteRow(i-1);
+        document.getElementById("table2").deleteRow(i - 1);
     }
-    else if(tableno==3){
+    else if (tableno == 3) {
         document.getElementById("table3").deleteRow(i);
-        document.getElementById("table3").deleteRow(i-1);
+        document.getElementById("table3").deleteRow(i - 1);
     }
-    else if(tableno==4){
+    else if (tableno == 4) {
         document.getElementById("table4").deleteRow(i);
-        document.getElementById("table4").deleteRow(i-1);
+        document.getElementById("table4").deleteRow(i - 1);
     }
-    else if(tableno==5){
+    else if (tableno == 5) {
         document.getElementById("table5").deleteRow(i);
-        document.getElementById("table5").deleteRow(i-1);
+        document.getElementById("table5").deleteRow(i - 1);
     }
-    else if(tableno==6){
+    else if (tableno == 6) {
         document.getElementById("table6").deleteRow(i);
-        document.getElementById("table6").deleteRow(i-1);
+        document.getElementById("table6").deleteRow(i - 1);
     }
-    else if(tableno==7){
+    else if (tableno == 7) {
         document.getElementById("table7").deleteRow(i);
-        document.getElementById("table7").deleteRow(i-1);
+        document.getElementById("table7").deleteRow(i - 1);
     }
-    else if(tableno==8){
+    else if (tableno == 8) {
         document.getElementById("table8").deleteRow(i);
-        document.getElementById("table8").deleteRow(i-1);
+        document.getElementById("table8").deleteRow(i - 1);
     }
-    else if(tableno==9){
+    else if (tableno == 9) {
         document.getElementById("table9").deleteRow(i);
-        document.getElementById("table9").deleteRow(i-1);
+        document.getElementById("table9").deleteRow(i - 1);
     }
-    else if(tableno==10){
+    else if (tableno == 10) {
         document.getElementById("table10").deleteRow(i);
-        document.getElementById("table10").deleteRow(i-1);
+        document.getElementById("table10").deleteRow(i - 1);
+    }
+}
+function deleteOrder(r, tableno) {
+
+    var i = r.parentNode.parentNode.rowIndex;
+    if (tableno == 1) {
+        document.getElementById("table1").deleteRow(i);
+        document.getElementById("table1").deleteRow(i - 1);
+    }
+    else if (tableno == 2) {
+        document.getElementById("table2").deleteRow(i);
+        document.getElementById("table2").deleteRow(i - 1);
+    }
+    else if (tableno == 3) {
+        document.getElementById("table3").deleteRow(i);
+        document.getElementById("table3").deleteRow(i - 1);
+    }
+    else if (tableno == 4) {
+        document.getElementById("table4").deleteRow(i);
+        document.getElementById("table4").deleteRow(i - 1);
+    }
+    else if (tableno == 5) {
+        document.getElementById("table5").deleteRow(i);
+        document.getElementById("table5").deleteRow(i - 1);
+    }
+    else if (tableno == 6) {
+        document.getElementById("table6").deleteRow(i);
+        document.getElementById("table6").deleteRow(i - 1);
+    }
+    else if (tableno == 7) {
+        document.getElementById("table7").deleteRow(i);
+        document.getElementById("table7").deleteRow(i - 1);
+    }
+    else if (tableno == 8) {
+        document.getElementById("table8").deleteRow(i);
+        document.getElementById("table8").deleteRow(i - 1);
+    }
+    else if (tableno == 9) {
+        document.getElementById("table9").deleteRow(i);
+        document.getElementById("table9").deleteRow(i - 1);
+    }
+    else if (tableno == 10) {
+        document.getElementById("table10").deleteRow(i);
+        document.getElementById("table10").deleteRow(i - 1);
     }
 }
 
 function openInfo(infoid) {
- 
+
     document.getElementById("infotab").style.height = "100%";
     var i, tabcontent;
     tabcontent = document.getElementsByClassName("infotabcontent");
@@ -216,5 +284,6 @@ function openInfo(infoid) {
 
 function closeInfo() {
     document.getElementById("infotab").style.height = "0%";
-     document.getElementById(number).style.display = "block";
+    document.getElementById(number).style.display = "block";
 }
+
