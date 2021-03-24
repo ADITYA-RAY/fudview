@@ -17,6 +17,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <title>Home | fudview</title>
 </head>
 
@@ -25,7 +27,7 @@
     <div class="bg-img">
         <div class="container">
             <div id="topnav">
-                <a href="index.html">Amayra The Multicusine Restraunt</a>
+                <a href="index.html">Amayra</a>
                 <a href="javascript:void(0)" onclick="openCartMenu()" style="float: right;"><i
                         class="fa fa-shopping-cart"></i></a>
             </div>
@@ -96,9 +98,10 @@
         </div>
     </div>
     <div id="defaultOpen">
+        
         <div class="rowcard">
             <div class="columncard">
-                <div class="maincard" data-aos="fade-up">
+                <div class="maincard" >
                     <div class="row3">
                         <div class=" column3 imgcontainer">
                             <img src="def.jpg">
@@ -118,7 +121,7 @@
                 </div>
             </div>
             <div class="columncard">
-                <div class="maincard" data-aos="fade-up">
+                <div class="maincard" >
                     <div class="row3">
                         <div class=" column3 imgcontainer">
                             <img src="def.jpg">
@@ -324,73 +327,126 @@
 
     <!--cart tab starts-->
     <div id="tabcontentcart" class="cart">
-        <p style="font-family: 'Redressed', cursive; font-size: 50px; background-color: rgb(4, 104, 4);color:white;float: left;
-        padding: 10px;margin: 0px 0px 50px 0px;width: 100%;">Cart<i class="fa fa-shopping-cart"></i>
+        <p style="font-family: 'Redressed', cursive; font-size: 40px; background-color: rgb(0, 179, 164);color:white;float: left;
+        padding: 10px;margin: 0px 0px 50px 0px;width: 100%;">Your Cart<i class="fa fa-shopping-cart"></i>
             <a href="javascript:void(0)" class="closebtn" onclick="closeCart()"><i class="fa fa-times"></i></a></span>
         </p>
 
-        <table id="table1">
-            <tr id="row1" display="none">
-                <td>Table 1</td>
-                <td><button onclick="placeOrder()">Place Order</button></td>
+        <table id="table1" style="display: none;">
+            <tr id="row1">
+                <th>Table 1</th>
+                <th>Quantity</th>
+                <th><button onclick="emptyCart('table1')" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+            <th><button id="t1o">PLACE ORDER</button></th>
+            <th colspan="2">Total: &#8377<span id="subtotal1" style="background-color: inherit;width: 100%;">0</span></th>
+            </tfoot>
         </table>
-        <table id="table2">
+        <table id="table2" style="display: none;">
             <tr>
-                <th>Table 2</th>
-                <th><button onclick="placeOrder()">Place Order</button></th>
+               <th>Table 2</th> <th>Quantity</th>
+                <th><button onclick="emptyCart(table2)" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+                <th>PLACE ORDER</th>
+                <th colspan="2">1000</th>
+                </tfoot>
         </table>
-        <table id="table3">
+        <table id="table3" style="display: none;">
             <tr>
-                <th>Table 3</th>
-                <th><button onclick="placeOrder()">Place Order</button></th>
+               <th>Table 3</th> <th>Quantity</th>
+                <th><button onclick="emptyCart(table3)" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+                <th>PLACE ORDER</th>
+                <th colspan="2">1000</th>
+                </tfoot>
         </table>
-        <table id="table4">
+        <table id="table4" style="display: none;">
             <tr>
-                <th>Table 4</th>
-                <th><button onclick="placeOrder()">Place Order</button></th>
+                <th>Table 4</th> <th>Quantity</th>
+                <th><button onclick="emptyCart(table4)" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+                <th>PLACE ORDER</th>
+                <th colspan="2">1000</th>
+                </tfoot>
         </table>
-        <table id="table5">
+        <table id="table5" style="display: none;">
             <tr>
-                <th>Table 5</th>
-                <th><button onclick="placeOrder()">Place Order</button></th>
+                <th>Table 5</th> <th>Quantity</th>
+                <th><button onclick="emptyCart(table5)" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+                <th>PLACE ORDER</th>
+                <th colspan="2">1000</th>
+                </tfoot>
         </table>
-        <table id="table6">
+        <table id="table6" style="display: none;">
             <tr>
+                
                 <th>Table 6</th>
-                <th><button onclick="placeOrder()">Place Order</button></th>
+                <th>Quantity</th>
+                <th><button onclick="emptyCart(table6)" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+                <th>PLACE ORDER</th>
+                <th colspan="2">1000</th>
+                </tfoot>
         </table>
-        <table id="table7">
+        <table id="table7" style="display: none;">
             <tr>
-                <th>Table 7</th>
-                <th><button onclick="placeOrder()">Place Order</button></th>
+             <th>Table 7</th>   <th>Quantity</th>
+                <th><button onclick="emptyCart(table7)" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+                <th>PLACE ORDER</th>
+                <th colspan="2">1000</th>
+                </tfoot>
         </table>
-        <table id="table8">
+        <table id="table8" style="display: none;">
             <tr>
-                <th>Table 8</th>
-                <th><button onclick="placeOrder()">Place Order</button></th>
+                <th>Table 8</th><th>Quantity</th>
+                <th><button onclick="emptyCart(table8)" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+                <th>PLACE ORDER</th>
+                <th colspan="2">1000</th>
+                </tfoot>
         </table>
-        <table id="table9">
+        <table id="table9" style="display: none;">
             <tr>
-                <th>Table 9</th>
-                <th><button onclick="placeOrder()">Place Order</button></th>
+               <th>Table 9</th> <th>Quantity</th>
+                <th><button onclick="emptyCart(table9)" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+                <th>PLACE ORDER</th>
+                <th colspan="2">1000</th>
+                </tfoot>
         </table>
-        <table id="table10">
+        <table id="table10" style="display: none;">
             <tr>
-                <th>Table 10</th>
-                <th><button onclick="placeOrder()">Place Order</button></th>
+                <th>Table 10</th><th>Quantity</th>
+                <th><button onclick="emptyCart(table10)" style="color: white;">Price</button></th>
             </tr>
+            <tfoot>
+                <th>PLACE ORDER</th>
+                <th colspan="2">1000</th>
+                </tfoot>
         </table>
-
-
+<div class="boxcontainer">
+<div class="boxes" id="box1">1</div>
+<div class="boxes" id="box2">2</div>
+<div class="boxes" id="box3">3</div>
+<div class="boxes" id="box4">4</div>
+<div class="boxes" id="box5">5</div>
+<div class="boxes" id="box6">6</div>
+<div class="boxes" id="box7">7</div>
+<div class="boxes" id="box8">8</div>
+<div class="boxes" id="box9">9</div>
+<div class="boxes" id="box10">10</div>
+</div>
     </div>
 
     <div id="infotab" class="info">
