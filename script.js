@@ -469,7 +469,7 @@ function decreaseq(r, tableno) {
         var p73 = parseInt(p72)
         var p74 = document.getElementById("subtotal7").innerHTML;
         var p75 = parseInt(p74);
-        document.getElementById("subtotal7").innerHTML = p75 + p73;
+        document.getElementById("subtotal7").innerHTML = p75 - p73;
         if (t72 == 0) {
             document.getElementById("table7").deleteRow(i);
         }
@@ -489,7 +489,7 @@ function decreaseq(r, tableno) {
         var p83 = parseInt(p82)
         var p84 = document.getElementById("subtotal8").innerHTML;
         var p85 = parseInt(p84);
-        document.getElementById("subtotal1").innerHTML = p85 + p83;
+        document.getElementById("subtotal8").innerHTML = p85 - p83;
         if (t82 == 0) {
             document.getElementById("table8").deleteRow(i);
         }
@@ -509,7 +509,7 @@ function decreaseq(r, tableno) {
         var p93 = parseInt(p92)
         var p94 = document.getElementById("subtotal9").innerHTML;
         var p95 = parseInt(p94);
-        document.getElementById("subtotal9").innerHTML = p95 + p93;
+        document.getElementById("subtotal9").innerHTML = p95 - p93;
         if (t92 == 0) {
             document.getElementById("table9").deleteRow(i);
         }
@@ -529,7 +529,7 @@ function decreaseq(r, tableno) {
         var p103 = parseInt(p102)
         var p104 = document.getElementById("subtotal10").innerHTML;
         var p105 = parseInt(p104);
-        document.getElementById("subtotal10").innerHTML = p105 + p103;
+        document.getElementById("subtotal10").innerHTML = p105 - p103;
         if (t102 == 0) {
             document.getElementById("table10").deleteRow(i);
         }
