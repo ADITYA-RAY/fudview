@@ -378,31 +378,54 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   width: 90%;
   position: fixed;
   z-index: 3;
-  top: 11%;
+  top: 5%;
   left:5%;
   background-color: rgb(255, 255, 255);
   transition: 0.5s;
   overflow-y: auto;
   overflow-x: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  
 }
 
 .info-content {
   width: 100%;
   margin: 0px;
   display:block;
-  float: none;
+  float: left;
+  padding: 0;
+  font-family: 'Lobster', cursive;
  
 }
-.info .closebtn {
-  position: absolute;
-  top: 0px;
-  right: 10px;
-  font-size: 40px;
-  color: rgb(65, 63, 63);
-  text-decoration: none;
-}
 
+.infodishname{
+ 
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  background-color:#2d7bff;
+  padding: 7px 10px;
+  margin: 0;
+}
+.infohead{
+  padding:10px 15px;
+  color: #2d7bff;
+  font-size: 20px;
+  width: 100%;
+}
+.infodesc{
+  color: #3b3b3b;
+  font-size: 15px;
+  width: 100%;
+  padding:0px 20px;
+}
+.ingredients{
+  color: #3b3b3b;
+  font-size: 15px;
+  width: 100%;
+  padding:0px 25px 10px 15px;
+}
 @media screen and (max-height: 450px) {
   .info {overflow-y: auto;}
   .info .closebtn {
@@ -414,7 +437,7 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
 .infocolumn {
   float: left;
   width: 50%;
-  padding: 0 10px;
+  padding: 0px;
   
 }
 @media screen and (max-width: 600px) {
