@@ -299,7 +299,7 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
 .cart table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 93%;
+  width: 94%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -312,9 +312,7 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   padding: 8px;
   text-align: center;
 }
-.cart table th:nth-child(even){
-  width: 30%;
-}
+
 .cart table tr:nth-child(even){background-color: #f2f2f2;}
 .cart table tr:hover {background-color: #ddd;}
 .cart table th {
