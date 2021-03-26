@@ -398,7 +398,10 @@ body {font-family: Arial, Helvetica, sans-serif;margin:0;
   font-family: 'Lobster', cursive;
  
 }
-
+.info-content img{
+  width: 40%;
+  margin: 0;
+}
 .infodishname{
  
   font-size: 20px;
