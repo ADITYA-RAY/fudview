@@ -308,7 +308,7 @@ function increaseq(r, tableno) {
         var p83 = parseInt(p82)
         var p84 = document.getElementById("subtotal8").innerHTML;
         var p85 = parseInt(p84);
-        document.getElementById("subtotal1").innerHTML = p85 + p83;
+        document.getElementById("subtotal8").innerHTML = p85 + p83;
     }
     else if (tableno == 9) {
         var t91 = document.getElementById("table9").querySelectorAll("span");
@@ -543,7 +543,7 @@ function decreaseq(r, tableno) {
 
 function openInfo(infoid) {
 
-    document.getElementById("infotab").style.height = "80%";
+    document.getElementById("infotab").style.height = "90%";
     var i, tabcontent;
     tabcontent = document.getElementsByClassName("infotabcontent");
     for (i = 0; i < tabcontent.length; i++) {
