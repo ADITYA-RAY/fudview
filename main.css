@@ -192,8 +192,8 @@ a{
   width: 58%;
   font-size: 22px;
   height: auto;
-  color: rgb(32, 32, 32);
-  font-family: 'Playfair Display', serif;
+  color: rgb(51, 51, 51);
+  font-family: 'Patrick Hand', cursive;
   
 }
 .p2 {
@@ -201,7 +201,7 @@ a{
   font-size: 30px;
   width: 20%;
   color: rgb(158, 0, 0);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Patrick Hand', cursive;
  float: left;
  font-weight: bold;
 }
