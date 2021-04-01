@@ -13,7 +13,7 @@ a{
   background-repeat: no-repeat;
   background-size:auto;
   position: relative;
-  
+  box-shadow: 0 0 20px 0 #ff599d;
 }
 .container {
   position: absolute;
@@ -163,9 +163,9 @@ a{
   position: relative;
   width: auto;
   background-color: rgba(0, 132, 255, 0);
-  box-shadow: 0 4px 8px 0 rgba(0, 153, 255, 0.2);
+  box-shadow: 0 4px 8px 0 #ff599e41;
   transition: 1.5s;
- 
+  background-image: url(x.png);
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: bottom;
@@ -200,7 +200,7 @@ a{
   
   font-size: 30px;
   width: 20%;
-  color: rgb(49, 47, 47);
+  color: rgb(0, 93, 129);
   font-family: 'Playfair Display', serif;
  float: left;
 }
