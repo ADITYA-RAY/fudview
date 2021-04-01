@@ -9,6 +9,7 @@
 
 
 
+
 //navbar scroll function starts---------------------------------------------------------------------------------------------------
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 window.onscroll = function () { scrollFunction() };
@@ -78,9 +79,7 @@ function openCategory(category, number) {
     }
     document.getElementById("defaultOpen").style.display = "none";
     tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+
 
     document.getElementById(number).style.display = "block";
     category.currentTarget.className += " active";
@@ -96,9 +95,12 @@ function closeCart() {
     document.getElementById("tabcontentcart").style.display = "none";
 }
 function openCart(dishname, price) {
-    var x = window.scrollX;
-    var y = window.scrollY;
-    window.onscroll = function () { window.scrollTo(x, y); };
+
+    var qu = document.getElementById("confirm");
+    qu.style.display = "block";
+    qu.style.transition = "1s";
+    setTimeout(function () { qu.style.display = "none" }, 1000);
+
     var tableno = document.getElementById("abc").value;
 
     if (tableno == 1) {
@@ -109,6 +111,29 @@ function openCart(dishname, price) {
         document.getElementById("box1").style.backgroundColor = "red";
         document.getElementById("table1").style.display = "table";
         document.getElementById("table1").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,1)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,1)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
+
+        var x1 = document.getElementById("table1").rows.length;
+        for (var i = 1; i < x1 - 1; i++) {
+            var d1 = document.getElementById("table1").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x1 - 1; j++) {
+                var d2 = document.getElementById("table1").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table1").deleteRow(x1 - 2);
+
+                    var t11 = document.getElementById("table1").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table1").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal1").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal1").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
     else if (tableno == 2) {
         var total2 = document.getElementById("subtotal2").innerHTML;
@@ -119,6 +144,28 @@ function openCart(dishname, price) {
         document.getElementById("table2").style.display = "table";
         document.getElementById("table2").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,2)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,2)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
 
+        var x2 = document.getElementById("table2").rows.length;
+        for (var i = 1; i < x2 - 1; i++) {
+            var d1 = document.getElementById("table2").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x2 - 1; j++) {
+                var d2 = document.getElementById("table2").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table2").deleteRow(x2 - 2);
+
+                    var t11 = document.getElementById("table2").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table2").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal2").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal2").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
     else if (tableno == 3) {
         var total3 = document.getElementById("subtotal3").innerHTML;
@@ -129,6 +176,28 @@ function openCart(dishname, price) {
         document.getElementById("table3").style.display = "table";
         document.getElementById("table3").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,3)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,3)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
 
+        var x3 = document.getElementById("table3").rows.length;
+        for (var i = 1; i < x3 - 1; i++) {
+            var d1 = document.getElementById("table3").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x3 - 1; j++) {
+                var d2 = document.getElementById("table3").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table3").deleteRow(x3 - 2);
+
+                    var t11 = document.getElementById("table3").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table3").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal3").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal3").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
     else if (tableno == 4) {
         var total4 = document.getElementById("subtotal4").innerHTML;
@@ -139,6 +208,28 @@ function openCart(dishname, price) {
         document.getElementById("table4").style.display = "table";
         document.getElementById("table4").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,4)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,4)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
 
+        var x4 = document.getElementById("table4").rows.length;
+        for (var i = 1; i < x4 - 1; i++) {
+            var d1 = document.getElementById("table4").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x4 - 1; j++) {
+                var d2 = document.getElementById("table4").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table4").deleteRow(x4 - 2);
+
+                    var t11 = document.getElementById("table4").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table4").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal4").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal4").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
     else if (tableno == 5) {
         var total5 = document.getElementById("subtotal5").innerHTML;
@@ -149,6 +240,28 @@ function openCart(dishname, price) {
         document.getElementById("table5").style.display = "table";
         document.getElementById("table5").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,5)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,5)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
 
+        var x5 = document.getElementById("table5").rows.length;
+        for (var i = 1; i < x5 - 1; i++) {
+            var d1 = document.getElementById("table5").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x5 - 1; j++) {
+                var d2 = document.getElementById("table5").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table5").deleteRow(x5 - 2);
+
+                    var t11 = document.getElementById("table5").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table5").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal5").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal5").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
     else if (tableno == 6) {
         var total6 = document.getElementById("subtotal6").innerHTML;
@@ -158,6 +271,28 @@ function openCart(dishname, price) {
         document.getElementById("box6").style.backgroundColor = "red";
         document.getElementById("table6").style.display = "table";
         document.getElementById("table6").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,6)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,6)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
+        var x1 = document.getElementById("table6").rows.length;
+        for (var i = 1; i < x6 - 1; i++) {
+            var d1 = document.getElementById("table6").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x6 - 1; j++) {
+                var d2 = document.getElementById("table6").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table6").deleteRow(x6 - 2);
+
+                    var t11 = document.getElementById("table6").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table6").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal6").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal6").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
     else if (tableno == 7) {
         var total7 = document.getElementById("subtotal7").innerHTML;
@@ -168,6 +303,28 @@ function openCart(dishname, price) {
         document.getElementById("table7").style.display = "table";
         document.getElementById("table7").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,7)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,7)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
 
+        var x7 = document.getElementById("table7").rows.length;
+        for (var i = 1; i < x7 - 1; i++) {
+            var d1 = document.getElementById("table7").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x7 - 1; j++) {
+                var d2 = document.getElementById("table7").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table7").deleteRow(x7 - 2);
+
+                    var t11 = document.getElementById("table7").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table7").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal7").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal7").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
     else if (tableno == 8) {
         var total8 = document.getElementById("subtotal8").innerHTML;
@@ -178,6 +335,28 @@ function openCart(dishname, price) {
         document.getElementById("table8").style.display = "table";
         document.getElementById("table8").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,8)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,8)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
 
+        var x8 = document.getElementById("table8").rows.length;
+        for (var i = 1; i < x8 - 1; i++) {
+            var d1 = document.getElementById("table8").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x8 - 1; j++) {
+                var d2 = document.getElementById("table8").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table8").deleteRow(x8 - 2);
+
+                    var t11 = document.getElementById("table8").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table8").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal8").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal8").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
     else if (tableno == 9) {
         var total9 = document.getElementById("subtotal9").innerHTML;
@@ -188,6 +367,28 @@ function openCart(dishname, price) {
         document.getElementById("table9").style.display = "table";
         document.getElementById("table9").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,9)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,9)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
 
+        var x9 = document.getElementById("table9").rows.length;
+        for (var i = 1; i < x9 - 1; i++) {
+            var d1 = document.getElementById("table9").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x9 - 1; j++) {
+                var d2 = document.getElementById("table9").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table9").deleteRow(x9 - 2);
+
+                    var t11 = document.getElementById("table9").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table9").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal9").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal9").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
     else if (tableno == 10) {
         var total10 = document.getElementById("subtotal10").innerHTML;
@@ -197,10 +398,32 @@ function openCart(dishname, price) {
         document.getElementById("box10").style.backgroundColor = "red";
         document.getElementById("table10").style.display = "table";
         document.getElementById("table10").innerHTML += "<tr>" + "<td>" + dishname + "</td>" + "<td>" + "<button id='decrease' onclick='decreaseq(this,10)'>-</button><span id='quantity'>1</span><button id='increase' onclick='increaseq(this,10)'>+</button>" + "</td>" + "<td>" + "&#8377 " + "<pri>" + price + "</pri>" + "</td>" + "</tr>";
+        var x10 = document.getElementById("table1").rows.length;
+
+        for (var i = 1; i < x10 - 1; i++) {
+            var d1 = document.getElementById("table10").rows[i].cells[0].innerHTML;
+            for (var j = i + 1; j < x10 - 1; j++) {
+                var d2 = document.getElementById("table10").rows[j].cells[0].innerHTML;
+                if (d1 == d2) {
+                    document.getElementById("table10").deleteRow(x10 - 2);
+
+                    var t11 = document.getElementById("table10").querySelectorAll("span");
+                    t12 = parseInt(t11[i].innerHTML);
+                    t12 += 1;
+                    t11[i].innerHTML = t12;
+                    var p11 = document.getElementById("table10").querySelectorAll("pri");
+                    var p12 = p11[x1 - 1].innerHTML;
+                    var p13 = parseInt(p12)
+                    var p14 = document.getElementById("subtotal10").innerHTML;
+                    var p15 = parseInt(p14);
+                    document.getElementById("subtotal10").innerHTML = p15 + p13;
+                }
+
+            }
+        }
     }
 
-    document.getElementById("tabcontentcart").style.display = "block";
-    document.getElementById("tableselect").style.height = "0%";
+
 
 
 
