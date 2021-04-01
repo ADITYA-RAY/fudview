@@ -101,7 +101,7 @@ a{
     position: relative;
     top: 50px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 0px;
     display:block;
     text-align:center;
   }
@@ -124,6 +124,7 @@ a{
     float: right;
     color: white;
     padding-right: 20px;
+    margin-bottom: -90px;
    
   }
   
@@ -134,7 +135,7 @@ a{
   @media screen and (max-width: 550px) {
     .overlay-content{
       text-align: left;
-      margin-top: 10px;
+      margin-top: 0px;
     }
     .overlay a {
       font-size: 30px;
