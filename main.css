@@ -13,7 +13,7 @@ a{
   background-repeat: no-repeat;
   background-size:auto;
   position: relative;
-  box-shadow: 0 0 20px 0 #ff599d;
+  box-shadow: 0 0 20px 0 rgba(255, 187, 0, 0.863);
 }
 .container {
   position: absolute;
@@ -200,9 +200,10 @@ a{
   
   font-size: 30px;
   width: 20%;
-  color: rgb(0, 93, 129);
+  color: rgb(0, 95, 158);
   font-family: 'Playfair Display', serif;
  float: left;
+ font-weight: bold;
 }
 .p3 {
 
