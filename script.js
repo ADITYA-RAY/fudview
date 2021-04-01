@@ -5,6 +5,8 @@
 //openCategory
 //openInfo
 //closeInfo
+//increaseq
+//decreaseq
 //reserved function names ends---------------------------------------------------------------------------------------------------
 
 
@@ -87,15 +89,14 @@ function openCategory(category, number) {
 
 }
 
-
-
 //cart tab---------------------------------------------------------------------------------------------
 function closeCart() {
-    window.onscroll = function () { };
+    
+  
     document.getElementById("tabcontentcart").style.display = "none";
+
 }
 function openCart(dishname, price) {
-
     var qu = document.getElementById("confirm");
     qu.style.display = "block";
     qu.style.transition = "1s";
