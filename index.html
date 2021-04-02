@@ -18,765 +18,783 @@
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap" rel="stylesheet">
     <title>Home | fudview</title>
 </head>
 
-<body >
+<body>
     <div id="allbody">
-    <p id="confirm" > Item added to cart</p>
+        <p id="confirm"> Item added to cart</p>
 
-    <div class="bg-img">
-        <div class="container">
-            <div id="topnav">
-                <a href="index.html">Amayra</a>
-                <a href="javascript:void(0)" onclick="openCartMenu()" style="float: right;"><i
-                        class="fa fa-shopping-cart"></i></a>
+        <div class="bg-img">
+            <div class="container">
+                <div id="topnav">
+                    <a href="index.html">Amayra</a>
+                    <a href="javascript:void(0)" onclick="openCartMenu()" style="float: right;"><i
+                            class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+            <div class="tableno">Select table
+                <select id="abc">
+                    <option value="1">table 1</option>
+                    <option value="2">table 2</option>
+                    <option value="3">table 3</option>
+                    <option value="4">table 4</option>
+                    <option value="5">table 5</option>
+                    <option value="6">table 6</option>
+                    <option value="7">table 7</option>
+                    <option value="8">table 8</option>
+                    <option value="9">table 9</option>
+                    <option value="10">table 10</option>
+                </select>
             </div>
         </div>
-        <div class="tableno">Select table
-            <select id="abc">
-                <option value="1">table 1</option>
-                <option value="2">table 2</option>
-                <option value="3">table 3</option>
-                <option value="4">table 4</option>
-                <option value="5">table 5</option>
-                <option value="6">table 6</option>
-                <option value="7">table 7</option>
-                <option value="8">table 8</option>
-                <option value="9">table 9</option>
-                <option value="10">table 10</option>
-            </select>
-        </div>
-    </div>
-    <p style="font-family: 'Redressed', cursive;font-size: 25px;
-     margin: 20px;padding: 10px 30px;border: 1px solid rgb(82, 80, 80);text-align: center;background-color: rgba(255, 255, 255, 0.438);"><span
-            style="cursor: pointer; " id="textcategory" onclick="openNav()">Choose Category
-        </span>
-        <span id="category" style="padding: 5px 10px;width: 200px;font-size: 18px;font-family: 'Redressed', 
+        <p
+            style="font-family: 'Redressed', cursive;font-size: 25px;
+     margin: 20px;padding: 10px 30px;border: 1px solid rgb(82, 80, 80);text-align: center;background-color: rgba(255, 255, 255, 0.438);">
+            <span style="cursor: pointer; " id="textcategory" onclick="openNav()">Choose Category
+            </span>
+            <span id="category" style="padding: 5px 10px;width: 200px;font-size: 18px;font-family: 'Redressed', 
         cursive;border: 1px solid rgb(95, 95, 95); border-radius: 10px;">
-            <span id="name">Veg Starter</span>
-        </span>
-    </p>
-    <!-- categories-->
-    <div id="myNav" class="overlay">
-        <span class="closebtn1" onclick="closeNav()">&times;</span>
-        <div class="overlay-content">
-            <a href="javascript:void(0)" onclick="openCategory(category, '1')" class="defaultOpen"><i
-                    class="fa fa-check-square-o" aria-hidden="true"></i>Veg
-                Starter</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '2')"> <i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>Non-veg starter</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '3')"> <i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>sandwich</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '4')"> <i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>salad</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '5')"> <i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>soup</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '6')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>chineese starter</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '7')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>Tandoori Veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '8')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>Pizza's</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '9')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>main course non-veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '10')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>Tandoori Non-veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '11')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>Chineese rice and noodles</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '12')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>main course veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '13')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>Beverage</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '14')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>chineese main course veg & non-veg</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '15')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>Roti/Indian Breads</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '16')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>Indian Rice's & Biryani</a>
-            <a href="javascript:void(0)" onclick="openCategory(category, '17')"><i class="fa fa-check-square-o"
-                    aria-hidden="true"></i>Desert's</a>
-        </div>
-    </div>
-    <div id="defaultOpen">
-
-        <div class="rowcard">
-            <div class="columncard">
-                <div class="maincard">
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Pakoda (Veg)
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>100
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart(' PAKODA (VEG)',100)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard">
-                <div class="maincard">
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Pakoda (Onion)
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>100
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('PAKODA (ONION)',100)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Pakoda (Paneer)
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>120
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart(' PAKODA(PANEER)',120)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Chole Bhature (Stuffed)
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>140
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('CHOLE BHATURE (STUFFED)',140)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Chana Chilly
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>150
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Chana Chilly',150)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Chana Roast
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>135
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Chana Roast',135)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Cheese Kurkure
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>200
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Cheese Kurkure',200)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Masala Dosa
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>90
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Masala Dosa',90)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Plain Dosa
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>70
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Plain Dosa',70)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <script>
-        AOS.init({ duration: 1200, });
-    </script>
-    <div id="1" class="tabcontent">
-        <div class="rowcard">
-            <div class="columncard">
-                <div class="maincard">
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Pakoda (Veg)
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>100
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart(' PAKODA (VEG)',100)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard">
-                <div class="maincard">
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Pakoda (Onion)
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>100
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('PAKODA (ONION)',100)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Pakoda (Paneer)
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>120
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart(' PAKODA(PANEER)',120)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            Chole Bhature (Stuffed)
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>140
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('CHOLE BHATURE (STUFFED)',140)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            CHANA CHILLY
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>150
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('CHANA CHILLY',150)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            CHANA ROAST
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>135
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',135)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            CHEESE KURKURE
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>200
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            MASALA DOSA
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>90
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Schezwan Cheese Corn Dosa',90)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-            <div class="columncard"data-aos="fade-up">
-                <div class="maincard" >
-                    <div class="row3">
-                        <div class=" column3 imgcontainer">
-                            <img src="def.jpg">
-                        </div>
-                        <div class="column3 p1">
-                            PLAIN DOSA
-                        </div>
-                        <div class="column3 p2" style="padding: 2px;">
-                            <span>&#8377</span>70
-                        </div>
-                    </div>
-                    <div class="p3"> <a href="javascript:void(0)" onclick="openCart('PLAIN DOSA',70)"><i
-                                class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
-                            onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
-                        <img src="d.png" height="27px" style="vertical-align: text-bottom;">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div id="2" class="tabcontent">
-        2
-    </div>
-    <div id="3" class="tabcontent">
-        3
-    </div>
-    <div id="4" class="tabcontent">
-    </div>
-    <div id="5" class="tabcontent">
-    </div>
-    <div id="6" class="tabcontent">
-    </div>
-    <div id="7" class="tabcontent">
-    </div>
-    <div id="8" class="tabcontent">
-    </div>
-    <div id="9" class="tabcontent">
-    </div>
-    <div id="10" class="tabcontent">
-    </div>
-    <div id="11" class="tabcontent">
-    </div>
-    <div id="12" class="tabcontent">
-    </div>
-    <div id="13" class="tabcontent">
-    </div>
-    <div id="14" class="tabcontent">
-    </div>
-    <div id="15" class="tabcontent">
-    </div>
-    <div id="16" class="tabcontent">
-    </div>
-    <div id="17" class="tabcontent">
-    </div>
-
-    <!--category tab end-->
-
-
-
-    <!--cart tab starts-->
-    <div id="tabcontentcart" class="cart">
-        <p style="font-family: 'Redressed', cursive; font-size: 40px; background-color: #2d7bff;color:white;float: left;
-        padding: 10px;margin: 0px 0px 50px 0px;width: 100%;">Your Cart<i class="fa fa-shopping-cart"></i>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeCart()"><i class="fa fa-times"></i></a></span>
+                <span id="name">Veg Starter</span>
+            </span>
         </p>
-
-        <table id="table1" style="display: none;">
-            <tr id="row1">
-                <th>Table 1</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th style="min-width: 55px;">Price
-                </th>
-            </tr>
-            <tfoot>
-                <th><button id="t1o">PLACE ORDER</button></th>
-                <th colspan="2">Total: &#8377<span id="subtotal1"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <table id="table2" style="display: none;">
-            <tr>
-                <th>Table 2</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tfoot>
-                <th>PLACE ORDER</th>
-                <th colspan="2">Total: &#8377<span id="subtotal2"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <table id="table3" style="display: none;">
-            <tr>
-                <th>Table 3</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tfoot>
-                <th>PLACE ORDER</th>
-                <th colspan="2">Total: &#8377<span id="subtotal3"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <table id="table4" style="display: none;">
-            <tr>
-                <th>Table 4</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tfoot>
-                <th>PLACE ORDER</th>
-                <th colspan="2">Total: &#8377<span id="subtotal4"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <table id="table5" style="display: none;">
-            <tr>
-                <th>Table 5</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tfoot>
-                <th>PLACE ORDER</th>
-                <th colspan="2">Total: &#8377<span id="subtotal5"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <table id="table6" style="display: none;">
-            <tr>
-
-                <th>Table 6</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tfoot>
-                <th>PLACE ORDER</th>
-                <th colspan="2">Total: &#8377<span id="subtotal6"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <table id="table7" style="display: none;">
-            <tr>
-                <th>Table 7</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tfoot>
-                <th>PLACE ORDER</th>
-                <th colspan="2">Total: &#8377<span id="subtotal7"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <table id="table8" style="display: none;">
-            <tr>
-                <th>Table 8</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tfoot>
-                <th>PLACE ORDER</th>
-                <th colspan="2">Total: &#8377<span id="subtotal8"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <table id="table9" style="display: none;">
-            <tr>
-                <th>Table 9</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tfoot>
-                <th>PLACE ORDER</th>
-                <th colspan="2">Total: &#8377<span id="subtotal9"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <table id="table10" style="display: none;">
-            <tr>
-                <th>Table 10</th>
-                <th style="min-width: 119px;">Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tfoot>
-                <th>PLACE ORDER</th>
-                <th colspan="2">Total: &#8377<span id="subtotal10"
-                        style="background-color: inherit;width: 100%;">0</span></th>
-            </tfoot>
-        </table>
-        <div class="boxcontainer">
-            <div class="boxes" id="box1">1</div>
-            <div class="boxes" id="box2">2</div>
-            <div class="boxes" id="box3">3</div>
-            <div class="boxes" id="box4">4</div>
-            <div class="boxes" id="box5">5</div>
-            <div class="boxes" id="box6">6</div>
-            <div class="boxes" id="box7">7</div>
-            <div class="boxes" id="box8">8</div>
-            <div class="boxes" id="box9">9</div>
-            <div class="boxes" id="box10">10</div>
-        </div>
-    </div>
-
-    <div id="infotab" class="info">
-        <div class="info-content w3-animate-zoom">
-            <div id="i1" class="infotabcontent">
-
-                <div class="row">
-                    <div class="infocolumn">
-                        <div class="infodishname">
-                            Pakoda (Veg)
-                            <a href="javascript:void(0)" style="float: right;text-decoration: none; font-size: 40px; position: absolute; top: -10px; right: 10px; color: rgb(196, 176, 0);"
-                                onclick="closeInfo()">&times;</a>
-                        </div>
-                        <center><img src="def.jpg"></center>
-                        <div class="infohead">
-                            Description
-                        </div>
-                        <div class="infodesc">
-                            A popular indian deep fried snacks gains special importance in the monsoon season
-                        </div>
-                    </div>
-                    <div class="infocolumn">
-                        <div class="infohead">
-                            Ingredients
-                        </div>
-                        <div class="ingredients">
-                            <p> <i class="fa fa-check-square-o" style="color: #2d7bff;"></i> Maida</p>
-                            <p> <i class="fa fa-check-square-o" style="color: #2d7bff;"></i> Meshed potatoes</p>
-                            <p> <i class="fa fa-check-square-o" style="color: #2d7bff; "></i> rawa</p>
-                            <p> <i class="fa fa-check-square-o" style="color: #2d7bff;"></i> oliveoil</p>
-                            <p> <i class="fa fa-check-square-o" style="color: #2d7bff;"></i> onions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="i2" class="infotabcontent">
-                <a href="javascript:void(0)" style="float: right; font-size: 30px;padding: 10px;text-decoration: none;"
-                    onclick="closeInfo()">&times;</a>
-                <div class="row">
-                    <div class="infocolumn">
-                        <div class="infodishname">
-                        </div>
-                        <div class="infohead">
-                        </div>
-                        <div class="infodesc">
-                        </div>
-                    </div>
-                    <div class="infocolumn">
-                        <div class="infohead">
-                        </div>
-                        <div class="ingridients">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="i3" class="infotabcontent">
-                <a href="javascript:void(0)" style="float: right; font-size: 30px;padding: 10px;text-decoration: none;"
-                    onclick="closeInfo()">&times;</a>
-                <div class="row">
-                    <div class="infocolumn">
-                        <div class="infodishname">
-                        </div>
-                        <div class="infohead">
-                        </div>
-                        <div class="infodesc">
-                        </div>
-                    </div>
-                    <div class="infocolumn">
-                        <div class="infohead">
-                        </div>
-                        <div class="ingridients">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="i4" class="infotabcontent">
-                <a href="javascript:void(0)" style="float: right; font-size: 30px;padding: 10px;text-decoration: none;"
-                    onclick="closeInfo()">&times;</a>
-                <div class="row">
-                    <div class="infocolumn">
-                        <div class="infodishname">
-                        </div>
-                        <div class="infohead">
-                        </div>
-                        <div class="infodesc">
-                        </div>
-                    </div>
-                    <div class="infocolumn">
-                        <div class="infohead">
-                        </div>
-                        <div class="ingridients">
-                        </div>
-                    </div>
-                </div>
+        <!-- categories-->
+        <div id="myNav" class="overlay">
+            <span class="closebtn1" onclick="closeNav()">&times;</span>
+            <div class="overlay-content">
+                <a href="javascript:void(0)" onclick="openCategory(category, '1')" class="defaultOpen"><i
+                        class="fa fa-check-square-o" aria-hidden="true"></i>Veg
+                    Starter</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '2')"> <i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>Non-veg starter</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '3')"> <i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>sandwich</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '4')"> <i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>salad</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '5')"> <i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>soup</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '6')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>chineese starter</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '7')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>Tandoori Veg</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '8')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>Pizza's</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '9')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>main course non-veg</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '10')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>Tandoori Non-veg</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '11')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>Chineese rice and noodles</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '12')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>main course veg</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '13')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>Beverage</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '14')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>chineese main course veg & non-veg</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '15')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>Roti/Indian Breads</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '16')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>Indian Rice's & Biryani</a>
+                <a href="javascript:void(0)" onclick="openCategory(category, '17')"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i>Desert's</a>
             </div>
         </div>
-    </div>
+        <div id="defaultOpen">
 
+            <div class="rowcard">
+                <div class="columncard">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Pakoda (Veg)
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>100
+                            </div>
+                        </div>
+                        <div class="p3"><img src="cd.png" style="float: left;top:0;width: 30px;padding-left: 5px;"><img
+                                src="cd.png" style="float: left;top:0;width: 30px;padding-left: 5px;"><a
+                                href="javascript:void(0)" onclick="openCart(' PAKODA (VEG)',100)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Pakoda (Onion)
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>100
+                            </div>
+                        </div>
+                        <div class="p3"><img src="cd.png" style="float: left;top:0;width: 30px;padding-left: 5px;"> <a
+                                href="javascript:void(0)" onclick="openCart('PAKODA (ONION)',100)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Pakoda (Paneer)
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>120
+                            </div>
+                        </div>
+                        <div class="p3"> <img src="cd.png" style="float: left;top:0;width: 30px;padding-left: 5px;"><a
+                                href="javascript:void(0)" onclick="openCart(' PAKODA(PANEER)',120)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Chole Bhature (Stuffed)
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>140
+                            </div>
+                        </div>
+                        <div class="p3"> <img src="cd.png" style="float: left;top:0;width: 30px;padding-left: 5px;"><img
+                                src="cd.png" style="float: left;top:0;width: 30px;padding-left: 5px;"><img src="cd.png"
+                                style="float: left;top:0;width: 30px;padding-left: 5px;"><a href="javascript:void(0)"
+                                onclick="openCart('CHOLE BHATURE (STUFFED)',140)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Chana Chilly
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>150
+                            </div>
+                        </div>
+                        <div class="p3"> <img src="cd.png" style="float: left;top:0;width: 30px;padding-left: 5px;"><a
+                                href="javascript:void(0)" onclick="openCart('Chana Chilly',150)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Chana Roast
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>135
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Chana Roast',135)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Cheese Kurkure
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>200
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Cheese Kurkure',200)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Masala Dosa
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>90
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Masala Dosa',90)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Plain Dosa
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>70
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)" onclick="openCart('Plain Dosa',70)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
 
-    <!--cart tab ends-->
-
-    <!--any thing before this point must be given a float-->
-    <!--footer-->
-
-    <div class="footer">
-        <div class="row">
-            <div class="column">
-                <center> <img src="fudviewlogo.png" width="100px" height="100px" style="border-radius: 50%;">
-                    <p>Digital Menu by FudView</p>
-                </center>
             </div>
-            <div class="column">
-                <p>Copyright <i class="fa fa-copyright"> </i> 2021. All Rights Reserved.</p>
-                <p>Made with <i class="fa fa-heart"> </i> in <img src="y.png"> by NeuroneLabs</p>
-                <p>#VocalForLocal</p>
+        </div>
+        <script>
+            AOS.init({ duration: 1200, });
+        </script>
+        <div id="1" class="tabcontent">
+            <div class="rowcard">
+                <div class="columncard">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Pakoda (Veg)
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>100
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)" onclick="openCart(' PAKODA (VEG)',100)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Pakoda (Onion)
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>100
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)" onclick="openCart('PAKODA (ONION)',100)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Pakoda (Paneer)
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>120
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)" onclick="openCart(' PAKODA(PANEER)',120)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                Chole Bhature (Stuffed)
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>140
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)"
+                                onclick="openCart('CHOLE BHATURE (STUFFED)',140)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                CHANA CHILLY
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>150
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)" onclick="openCart('CHANA CHILLY',150)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                CHANA ROAST
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>135
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)"
+                                onclick="openCart('Schezwan Cheese Corn Dosa',135)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                CHEESE KURKURE
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>200
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)"
+                                onclick="openCart('Schezwan Cheese Corn Dosa',200)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                MASALA DOSA
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>90
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)"
+                                onclick="openCart('Schezwan Cheese Corn Dosa',90)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+                <div class="columncard" data-aos="fade-up">
+                    <div class="maincard">
+                        <div class="row3">
+                            <div class=" column3 imgcontainer">
+                                <img src="def.jpg">
+                            </div>
+                            <div class="column3 p1">
+                                PLAIN DOSA
+                            </div>
+                            <div class="column3 p2" style="padding: 2px;">
+                                <span>&#8377</span>70
+                            </div>
+                        </div>
+                        <div class="p3"> <a href="javascript:void(0)" onclick="openCart('PLAIN DOSA',70)"><i
+                                    class="fa fa-shopping-cart"></i></a> | <a href="javascript:void(0)"
+                                onclick="openInfo('i1')"><i class="fa fa-info-circle" aria-hidden="true"></i></a> |
+                            <img src="d.png" height="27px" style="vertical-align: text-bottom;">
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="column">
-                <p>FudView a Product of NeuroneLabs</p>
+        </div>
+        <div id="2" class="tabcontent">
+            2
+        </div>
+        <div id="3" class="tabcontent">
+            3
+        </div>
+        <div id="4" class="tabcontent">
+        </div>
+        <div id="5" class="tabcontent">
+        </div>
+        <div id="6" class="tabcontent">
+        </div>
+        <div id="7" class="tabcontent">
+        </div>
+        <div id="8" class="tabcontent">
+        </div>
+        <div id="9" class="tabcontent">
+        </div>
+        <div id="10" class="tabcontent">
+        </div>
+        <div id="11" class="tabcontent">
+        </div>
+        <div id="12" class="tabcontent">
+        </div>
+        <div id="13" class="tabcontent">
+        </div>
+        <div id="14" class="tabcontent">
+        </div>
+        <div id="15" class="tabcontent">
+        </div>
+        <div id="16" class="tabcontent">
+        </div>
+        <div id="17" class="tabcontent">
+        </div>
+
+        <!--category tab end-->
+
+
+
+        <!--cart tab starts-->
+        <div id="tabcontentcart" class="cart">
+            <p style="font-family: 'Redressed', cursive; font-size: 40px; background-color: #2d7bff;color:white;float: left;
+        padding: 10px;margin: 0px 0px 50px 0px;width: 100%;">Your Cart<i class="fa fa-shopping-cart"></i>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeCart()"><i
+                        class="fa fa-times"></i></a></span>
+            </p>
+
+            <table id="table1" style="display: none;">
+                <tr id="row1">
+                    <th>Table 1</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th style="min-width: 55px;">Price
+                    </th>
+                </tr>
+                <tfoot>
+                    <th><button id="t1o">PLACE ORDER</button></th>
+                    <th colspan="2">Total: &#8377<span id="subtotal1"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <table id="table2" style="display: none;">
+                <tr>
+                    <th>Table 2</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tfoot>
+                    <th>PLACE ORDER</th>
+                    <th colspan="2">Total: &#8377<span id="subtotal2"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <table id="table3" style="display: none;">
+                <tr>
+                    <th>Table 3</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tfoot>
+                    <th>PLACE ORDER</th>
+                    <th colspan="2">Total: &#8377<span id="subtotal3"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <table id="table4" style="display: none;">
+                <tr>
+                    <th>Table 4</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tfoot>
+                    <th>PLACE ORDER</th>
+                    <th colspan="2">Total: &#8377<span id="subtotal4"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <table id="table5" style="display: none;">
+                <tr>
+                    <th>Table 5</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tfoot>
+                    <th>PLACE ORDER</th>
+                    <th colspan="2">Total: &#8377<span id="subtotal5"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <table id="table6" style="display: none;">
+                <tr>
+
+                    <th>Table 6</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tfoot>
+                    <th>PLACE ORDER</th>
+                    <th colspan="2">Total: &#8377<span id="subtotal6"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <table id="table7" style="display: none;">
+                <tr>
+                    <th>Table 7</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tfoot>
+                    <th>PLACE ORDER</th>
+                    <th colspan="2">Total: &#8377<span id="subtotal7"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <table id="table8" style="display: none;">
+                <tr>
+                    <th>Table 8</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tfoot>
+                    <th>PLACE ORDER</th>
+                    <th colspan="2">Total: &#8377<span id="subtotal8"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <table id="table9" style="display: none;">
+                <tr>
+                    <th>Table 9</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tfoot>
+                    <th>PLACE ORDER</th>
+                    <th colspan="2">Total: &#8377<span id="subtotal9"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <table id="table10" style="display: none;">
+                <tr>
+                    <th>Table 10</th>
+                    <th style="min-width: 119px;">Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tfoot>
+                    <th>PLACE ORDER</th>
+                    <th colspan="2">Total: &#8377<span id="subtotal10"
+                            style="background-color: inherit;width: 100%;">0</span></th>
+                </tfoot>
+            </table>
+            <div class="boxcontainer">
+                <div class="boxes" id="box1">1</div>
+                <div class="boxes" id="box2">2</div>
+                <div class="boxes" id="box3">3</div>
+                <div class="boxes" id="box4">4</div>
+                <div class="boxes" id="box5">5</div>
+                <div class="boxes" id="box6">6</div>
+                <div class="boxes" id="box7">7</div>
+                <div class="boxes" id="box8">8</div>
+                <div class="boxes" id="box9">9</div>
+                <div class="boxes" id="box10">10</div>
+            </div>
+        </div>
+
+        <div id="infotab" class="info">
+            <div class="info-content w3-animate-zoom">
+                <div id="i1" class="infotabcontent">
+
+                    <div class="row">
+                        <div class="infocolumn">
+                            <div class="infodishname">
+                                Pakoda (Veg)
+                                <a href="javascript:void(0)"
+                                    style="float: right;text-decoration: none; font-size: 40px; position: absolute; top: -10px; right: 10px; color: rgb(196, 176, 0);"
+                                    onclick="closeInfo()">&times;</a>
+                            </div>
+                            <center><img src="def.jpg"></center>
+                            <div class="infohead">
+                                Description
+                            </div>
+                            <div class="infodesc">
+                                A popular indian deep fried snacks gains special importance in the monsoon season
+                            </div>
+                        </div>
+                        <div class="infocolumn">
+                            <div class="infohead">
+                                Ingredients
+                            </div>
+                            <div class="ingredients">
+                                <p> <i class="fa fa-check-square-o" style="color: #2d7bff;"></i> Maida</p>
+                                <p> <i class="fa fa-check-square-o" style="color: #2d7bff;"></i> Meshed potatoes</p>
+                                <p> <i class="fa fa-check-square-o" style="color: #2d7bff; "></i> rawa</p>
+                                <p> <i class="fa fa-check-square-o" style="color: #2d7bff;"></i> oliveoil</p>
+                                <p> <i class="fa fa-check-square-o" style="color: #2d7bff;"></i> onions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="i2" class="infotabcontent">
+                    <a href="javascript:void(0)"
+                        style="float: right; font-size: 30px;padding: 10px;text-decoration: none;"
+                        onclick="closeInfo()">&times;</a>
+                    <div class="row">
+                        <div class="infocolumn">
+                            <div class="infodishname">
+                            </div>
+                            <div class="infohead">
+                            </div>
+                            <div class="infodesc">
+                            </div>
+                        </div>
+                        <div class="infocolumn">
+                            <div class="infohead">
+                            </div>
+                            <div class="ingridients">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="i3" class="infotabcontent">
+                    <a href="javascript:void(0)"
+                        style="float: right; font-size: 30px;padding: 10px;text-decoration: none;"
+                        onclick="closeInfo()">&times;</a>
+                    <div class="row">
+                        <div class="infocolumn">
+                            <div class="infodishname">
+                            </div>
+                            <div class="infohead">
+                            </div>
+                            <div class="infodesc">
+                            </div>
+                        </div>
+                        <div class="infocolumn">
+                            <div class="infohead">
+                            </div>
+                            <div class="ingridients">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="i4" class="infotabcontent">
+                    <a href="javascript:void(0)"
+                        style="float: right; font-size: 30px;padding: 10px;text-decoration: none;"
+                        onclick="closeInfo()">&times;</a>
+                    <div class="row">
+                        <div class="infocolumn">
+                            <div class="infodishname">
+                            </div>
+                            <div class="infohead">
+                            </div>
+                            <div class="infodesc">
+                            </div>
+                        </div>
+                        <div class="infocolumn">
+                            <div class="infohead">
+                            </div>
+                            <div class="ingridients">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--cart tab ends-->
+
+        <!--any thing before this point must be given a float-->
+        <!--footer-->
+
+        <div class="footer">
+            <div class="row">
+                <div class="column">
+                    <center> <img src="fudviewlogo.png" width="100px" height="100px" style="border-radius: 50%;">
+                        <p>Digital Menu by FudView</p>
+                    </center>
+                </div>
+                <div class="column">
+                    <p>Copyright <i class="fa fa-copyright"> </i> 2021. All Rights Reserved.</p>
+                    <p>Made with <i class="fa fa-heart"> </i> in <img src="y.png"> by NeuroneLabs</p>
+                    <p>#VocalForLocal</p>
+                </div>
+                <div class="column">
+                    <p>FudView a Product of NeuroneLabs</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>
