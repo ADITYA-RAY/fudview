@@ -54,7 +54,7 @@ a{
 }
 /*choose category button----------------------------------------------------------------------------------------*/
 #textcategory:hover{
-  color:rgb(0, 170, 28);
+  color:rgb(255, 208, 0);
 }
 /*table number selection-----------------------------------------------------------------------------------------*/
 .tableno{
@@ -105,7 +105,9 @@ a{
     width: 100%;
     margin-top: 30px;
     display:block;
-    text-align:center;
+    margin-left: 10%;
+    margin-right: auto;
+    
   }
   .overlay a {
     padding: 8px 20px;
@@ -115,10 +117,11 @@ a{
     display: inline-block;
     transition: 0.3s;
     font-family: 'Redressed', cursive;
+    width: 40%;
   }
   
   .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: rgb(255, 208, 0);
   }
   
   .overlay .closebtn1 {
@@ -138,6 +141,7 @@ a{
     .overlay-content{
       text-align: left;
       margin-top: 0px;
+      margin-left: 20px;
     }
     .overlay .closebtn1 {
      margin-bottom: -90px;
@@ -164,7 +168,7 @@ a{
   flex-direction: column;
   position: relative;
   width: auto;
-  background-color: rgba(0, 132, 255, 0);
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 8px 0 #00000021;
   transition: 1.5s;
   background-repeat: no-repeat;
@@ -337,7 +341,7 @@ a{
   padding-top: 0px;
   padding-bottom: 0px;
   text-align: center;
-  background-color: #2d7bff;
+  background-color: rgb(218, 178, 0);
   color: white;
   
 }
@@ -480,7 +484,8 @@ text-align: center;
 width: 90%;
 margin-left: auto;
 margin-top: 30px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.2);
+
 
 }
 .boxes{
@@ -494,7 +499,8 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   color: white;
   font-size: 20px;
-  font-family: 'Courier New', Courier, monospace
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid rgb(218, 178, 0);
 }
 #increase{
   height: 30px;
