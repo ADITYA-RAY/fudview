@@ -969,7 +969,7 @@ function retrive7() {
     var x1 = localStorage.getItem("rl7");
     if (x1 > 2) {
         document.getElementById("box7").style.backgroundColor = "red";
-        document.getElementById("table"7).style.display = "table";
+        document.getElementById("table7").style.display = "table";
         document.getElementById("subtotal7").innerHTML = localStorage.getItem("subtotal7");
         for (var i = 1; i < x1 - 1; i++) {
             dishname = localStorage.getItem("d7" + i);
