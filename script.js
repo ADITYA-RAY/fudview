@@ -1,3 +1,4 @@
+
 //reserved function names start--------------------------------------------------------------------------------------------------
 //scrollFunction
 //openNav
@@ -7,6 +8,9 @@
 //closeInfo
 //increaseq
 //decreaseq
+//testFunc(1-10)
+//retrive(1-10)
+//store
 //reserved function names ends---------------------------------------------------------------------------------------------------
 
 
@@ -24,6 +28,7 @@ function scrollFunction() {
 }
 //navbar scroll function ends-------------------------------------------------------------------------------------------------------
 
+//this is to open or close category names overlay--------------------------------------------------------------------------
 function openNav() {
     document.getElementById("myNav").style.height = "100%";
 }
@@ -31,6 +36,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.height = "0%";
 }
+//upper functions end--------------------------------------------------------------------------------------------
 
 //category function tab-------------------------------------------------------------------------------------------------
 function openCategory(category, number) {
@@ -87,7 +93,7 @@ function openCategory(category, number) {
 
 
 }
-
+//upper function ends------------------------------------------------------------------------------------------
 //cart tab---------------------------------------------------------------------------------------------
 function closeCart() {
 
@@ -401,12 +407,15 @@ function openCart(dishname, price) {
 
 
 }
-
+//upper function ends---------------------------------------------------------------------------------------------
+//this is for cart button in top nav just opens the cart and do nothing other operations------------------------
 function openCartMenu() {
     document.getElementById("tabcontentcart").style.display = "block";
     document.getElementById("tableselect").style.height = "0%";
 }
+//upper function ends---------------------------------------------------------------------------------------
 
+//these is to increase or decrease quantity of dish when + or - button pressed-----------------------------
 function increaseq(r, tableno) {
     var i = r.parentNode.parentNode.rowIndex;
 
@@ -777,7 +786,9 @@ function decreaseq(r, tableno) {
         testFunc10(x10);
     }
 }
+//upper function ends-------------------------------------------------------------------------------------------
 
+//this for more information about dish tab------------------------------------------------------------------------
 function openInfo(infoid) {
 
     document.getElementById("infotab").style.height = "90%";
@@ -790,11 +801,13 @@ function openInfo(infoid) {
     }
 
 }
-
 function closeInfo() {
     document.getElementById("infotab").style.height = "0%";
     document.getElementById(number).style.display = "block";
 }
+//upper function ends--------------------------------------------------------------------------------------------
+
+//call all function for localstorage print on reload------------------------------------------------------
 window.onload = function () { call() };
 function call() {
     // localStorage.clear();
@@ -809,6 +822,7 @@ function call() {
     retrive9();
     retrive10();
 }
+//thease function are to print thae data lost on reload of browser for each table there is one function---------------
 function retrive1() {
 
     var dishname;
@@ -999,6 +1013,8 @@ function retrive10() {
         }
     }
 }
+//upper functions ends-------------------------------------------------------------------------------------------
+//these functions take data backup of cart whenever there is any change detected in cart--------------------------
 function testFunc1(x1) {
     for (var i = 0; i <= 200; i++) {
         localStorage.removeItem("d1" + i);
@@ -1287,3 +1303,4 @@ function testFunc10(x1) {
     localStorage.setItem("rl10", x10);
 
 }
+//upper function ends-------------------------------------------------------------------------------------------
